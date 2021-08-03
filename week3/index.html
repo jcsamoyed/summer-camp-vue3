@@ -32,7 +32,7 @@
                             <div class="form-check">
                                 <div>
                                     <input :id="list.id" type="checkbox" class="form-check-input"
-                                        @click="list.isCompleted = !list.isCompleted">
+                                        @click="list.isCompleted = !list.isCompleted" v-model="list.isCompleted">
                                     <label :for="list.id" :class="{ completed:list.isCompleted }"
                                         @dblclick="editTodo(list)">{{ list.text }}</label>
                                 </div>
@@ -64,6 +64,7 @@
             </div>
         </div>
     </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous">
     </script>
